@@ -44,7 +44,7 @@ const academic = [
     title: "Bachelor of Computer Science (Software Development)",
     place: "Universiti Teknikal Malaysia Melaka (UTeM)",
     year: "2023 – Present",
-    img: "assets/academic/utem.png", // ✅ put this file
+    img: "assets/logos/utem.png", // ✅ put this file
     details: [
       "Program: Software Development",
       "Focus: UI/UX, Web, Mobile, AI projects",
@@ -54,10 +54,10 @@ const academic = [
   {
     id: "matric",
     level: "Matriculation",
-    title: "Matriculation Programme",
+    title: "Matriculation Programme (CGPA 3.89)",
     place: "Kolej Matrikulasi",
     year: "2022 – 2023",
-    img: "assets/academic/matric.png", // ✅ put this file
+    img: "assets/logos/kmkph.png", // ✅ put this file
     details: [
       "Foundation studies before degree",
       "Prepared for computing & problem-solving",
@@ -67,10 +67,10 @@ const academic = [
   {
     id: "spm",
     level: "SPM",
-    title: "Sijil Pelajaran Malaysia (SPM)",
+    title: "Sijil Pelajaran Malaysia (SPM) (5A 3B 1 C)",
     place: "Secondary School",
-    year: "2021",
-    img: "assets/academic/spm.png", // ✅ put this file
+    year: "2016 – 2021",
+    img: "assets/logos/smktpg.png", // ✅ put this file
     details: [
       "Core subjects + elective subjects",
       "Built early interest in computing",
