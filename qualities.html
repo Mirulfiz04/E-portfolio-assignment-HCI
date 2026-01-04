@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Qualities — Amirul Hafiz</title>
+  <link rel="stylesheet" href="css/qualities.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+  <span class="logo avatarLogo">
+    <img src="assets/avatar.png" alt="Amirul Hafiz"
+      onerror="this.remove(); this.parentElement.textContent='A';" />
+  </span>
+  <b>Amirul Hafiz</b>
+</a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+      <a href="works.html">Works</a>
+      <a class="active" href="qualities.html">Qualities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card head">
+      <h1>Personal Qualities</h1>
+      <p class="muted">
+        This page highlights my technical skills, language proficiency, tools knowledge, and personal strengths.
+        Click badges to explore details — skill bars animate when visible.
+      </p>
+    </section>
+
+    <section class="grid">
+      <!-- TECH SKILLS -->
+      <article class="card box">
+        <h2>Technical Skills</h2>
+
+        <div class="skill" data-val="90">
+          <div class="row"><b>UI/UX Design</b><span>90%</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="85">
+          <div class="row"><b>Front-End (HTML/CSS/JS)</b><span>85%</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="85">
+          <div class="row"><b>Database (MySQL)</b><span>85%</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="75">
+          <div class="row"><b>Networking</b><span>75%</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="75">
+          <div class="row"><b>AI</b><span>75%</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <p class="muted tip">
+          These skills support my academic projects, prototypes, and system development tasks.
+        </p>
+      </article>
+
+      <!-- BADGES -->
+      <article class="card box">
+        <h2>Strength Badges</h2>
+
+        <div class="badges" id="badges">
+          <button class="badge active" data-text="I communicate clearly in group work and always update progress (tasks, meetings, and documentation).">
+            Communication
+          </button>
+          <button class="badge" data-text="I plan tasks early, follow deadlines, and deliver based on requirements and rubrics.">
+            Responsible
+          </button>
+          <button class="badge" data-text="I enjoy polishing UI details such as spacing, hover effects, and validation so the experience feels smooth.">
+            Detail-Oriented
+          </button>
+          <button class="badge" data-text="When requirements change, I adapt quickly and maintain consistent structure across pages/features.">
+            Flexible
+          </button>
+          <button class="badge" data-text="I work well with teammates by dividing tasks, integrating work, and helping with debugging when needed.">
+            Teamwork
+          </button>
+          <button class="badge" data-text="I debug step-by-step using console logs, checking paths/events, and testing until features work properly.">
+            Problem Solver
+          </button>
+          <button class="badge" data-text="I able to lead the team by assigning tasks, monitoring progress, and ensuring timely completion of projects.">
+            Leadership
+          </button>
+        </div>
+
+        <p class="note muted" id="note">
+          I communicate clearly in group work and always update progress (tasks, meetings, and documentation).
+        </p>
+      </article>
+
+      <!-- LANGUAGE SKILLS -->
+      <article class="card box">
+        <h2>Language Skills</h2>
+
+        <div class="skill" data-val="95">
+          <div class="row"><b>Bahasa Melayu</b><span>Fluent</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="95">
+          <div class="row"><b>English</b><span>Fluent</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="25">
+          <div class="row"><b>Japanese</b><span>Basics</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <p class="muted tip">
+          Language proficiency helps me communicate ideas clearly in reports, presentations, and teamwork.
+        </p>
+      </article>
+
+      <!-- TOOLS SKILLS -->
+      <article class="card box">
+        <h2>Productivity & Design Tools</h2>
+
+        <div class="skill" data-val="75">
+          <div class="row"><b>Microsoft Excel</b><span>Intermediate</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="85">
+          <div class="row"><b>Microsoft Word</b><span>Advanced</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="80">
+          <div class="row"><b>PowerPoint</b><span>Advanced</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="70">
+          <div class="row"><b>Adobe Photoshop</b><span>Intermediate</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="70">
+          <div class="row"><b>Adobe Illustrator</b><span>Intermediate</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <div class="skill" data-val="85">
+          <div class="row"><b>Figma</b><span>Advanced</span></div>
+          <div class="bar"><i></i></div>
+        </div>
+
+        <p class="muted tip">
+          These tools support documentation, data organisation, UI design, and presentations.
+        </p>
+      </article>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="card reflect">
+      <h2>Reflection</h2>
+      <p class="muted">
+        I believe personal qualities are as important as technical skills. Through academic and group projects, I learned that
+        clear communication, responsibility, and attention to detail directly affect project success and user experience.
+        Going forward, I will continue improving my technical abilities while strengthening teamwork, design thinking, and
+        professional communication.
+      </p>
+    </section>
+
+    <footer class="footer">
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/qualities.js"></script>
+</body>
+</html>

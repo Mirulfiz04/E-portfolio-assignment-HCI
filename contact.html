@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Amirul Hafiz</title>
+  <link rel="stylesheet" href="css/contact.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="logo avatarLogo">
+        <img src="assets/avatar.png" alt="Amirul Hafiz"
+          onerror="this.remove(); this.parentElement.textContent='A';" />
+      </span>
+      <b>Amirul Hafiz</b>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+      <a href="works.html">Works</a>
+      <a href="qualities.html">Qualities</a>
+      <a class="active" href="contact.html">Contact</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn" type="button">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card head">
+      <h1>Contact Me</h1>
+      <p class="muted">Fill in the form — it validates input and gives feedback (interaction style + usability).</p>
+    </section>
+
+    <section class="grid">
+      <form class="card form" id="form" novalidate>
+        <label>
+          <span>Name</span>
+          <input id="name" type="text" placeholder="Your name" required minlength="2" />
+          <small class="err" id="eName"></small>
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input id="email" type="email" placeholder="you@example.com" required />
+          <small class="err" id="eEmail"></small>
+        </label>
+
+        <label>
+          <span>Message</span>
+          <textarea id="msg" rows="5" placeholder="Write your message..." required minlength="8"></textarea>
+          <small class="err" id="eMsg"></small>
+        </label>
+
+        <div class="row">
+          <button class="btn primary" type="submit">Send Message</button>
+          <button class="btn" type="button" id="clear">Clear</button>
+        </div>
+
+        <p class="muted tiny">Note: This is a prototype. For real submission, connect to email or Google Form.</p>
+      </form>
+
+      <aside class="card side">
+        <h2>Quick Links</h2>
+        <div class="links">
+          <button class="pill" id="copyEmail" type="button">📧 Copy Email</button>
+          <a class="pill" href="works.html">🧩 View Works</a>
+          <a class="pill" href="academic.html">📚 Academic</a>
+        </div>
+
+        <div class="card mini">
+          <h3>Contact Details</h3>
+          <p class="muted">Email: <b id="myEmailText">amirul.hafiz73@gmail.com</b></p>
+          <p class="muted">Phone: <b>+60 17-2480218</b></p>
+          <p class="muted">Location: <b>Selangor, Malaysia</b></p>
+        </div>
+      </aside>
+    </section>
+
+    <!-- ✅ Bottom row (fills the “blank space” nicely) -->
+    <section class="grid bottomGrid">
+      <section class="card socialBox">
+        <h2>Connect With Me</h2>
+        <p class="muted">You can also reach me through these platforms.</p>
+
+        <div class="connectGrid">
+          <a class="pill wide" href="https://github.com/Mirulfiz04" target="_blank" rel="noopener">💻 GitHub</a>
+          <a class="pill wide" href="https://www.linkedin.com/in/mirulfiz040428/" target="_blank" rel="noopener">🔗 LinkedIn</a>
+          <a class="pill wide" id="openMail" href="#" role="button">📧 Email</a>
+          <a class="pill wide" href="https://wa.me/60172480218" target="_blank" rel="noopener">💬 WhatsApp</a>
+        </div>
+      </section>
+
+      <section class="card socialBox">
+          <h2>Social Media</h2>
+          <p class="muted">My lifestyle and Social Media.</p>
+
+          <!-- ✅ ADD THIS WRAPPER -->
+          <div class="links">
+
+            <a href="https://instagram.com/mirulfiz04"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill">
+              📸 <b>Instagram</b><br>
+              <span class="muted">mirulfiz04</span>
+            </a>
+
+            <a href="https://www.tiktok.com/@mirulfiz"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill">
+              🎵 <b>TikTok</b><br>
+              <span class="muted">@mirulfiz</span>
+            </a>
+
+            <a href="https://www.youtube.com/@snowice3241"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill">
+              ▶️ <b>YouTube</b><br>
+              <span class="muted">Amirul Hafiz (@snowice3241)</span>
+            </a>
+
+            <a href="https://YOUR-PORTFOLIO-LINK"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="pill">
+              🌐 <b>Website</b><br>
+              <span class="muted">Portfolio link</span>
+            </a>
+
+          </div>
+        </section>
+
+    </section>
+
+    <footer class="footer">
+      <a class="btn ghost" href="index.html">Back Home</a>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/contact.js"></script>
+</body>
+</html>

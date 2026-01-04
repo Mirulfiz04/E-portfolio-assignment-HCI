@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amirul Hafiz — Portfolio</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="topbar">
+    <div class="brand">
+  <span class="logo avatarLogo">
+    <img
+      src="assets/avatar.png"
+      alt="Amirul Hafiz"
+      onerror="this.remove(); this.parentElement.textContent='A';"
+    />
+  </span>
+
+  <div>
+    <div class="name">Amirul Hafiz</div>
+    <div class="tag">UTeM • Digital Portfolio</div>
+  </div>
+</div>
+
+
+    <nav class="nav" aria-label="Primary">
+      <a class="active" href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+      <a href="works.html">Works</a>
+      <a href="qualities.html">Qualities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero card">
+      <div class="hero-left">
+        <div class="pill">High-Fidelity Prototype • HCI Friendly</div>
+        <h1>
+          Hi, I’m <span class="grad">Amirul Hafiz</span> 👋
+          <br />I build clean, interactive apps.
+        </h1>
+        <p class="lead">
+          This portfolio showcases my academic work, projects, and personal qualities — designed with good
+          navigation, clear information organisation, and interaction styles.
+        </p>
+
+        <div class="cta">
+          <a class="btn primary" href="works.html">View My Works</a>
+          <a class="btn" href="about.html">Get to Know Me</a>
+        </div>
+
+        <div class="quick">
+          <div class="stat">
+            <div class="num" data-counter="4">0</div>
+            <div class="lbl">Projects</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-counter="14">0</div>
+            <div class="lbl">Skills</div>
+          </div>
+          <div class="stat">
+            <div class="num" data-counter="4">0</div>
+            <div class="lbl">Awards</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="avatarWrap">
+          <img class="avatar"
+              src="assets/avatar.png"
+              data-alt1="assets/avatar-alt.png"
+              data-alt2="assets/avatar2-alt.png"
+              alt="Your portrait"
+              onerror="this.style.display='none';document.querySelector('.avatarFallback').style.display='grid';" />
+
+          <div class="avatarFallback" aria-hidden="true">
+            <span>AH</span>
+          </div>
+        </div>
+        
+        <div class="mini card glass">
+          <div class="miniTitle">Current Focus</div>
+          <div class="chips" id="chipBox">
+            <button class="chip active" data-chip="UI/UX">UI/UX</button>
+            <button class="chip" data-chip="Web">Web</button>
+            <button class="chip" data-chip="Mobile">Mobile</button>
+            <button class="chip" data-chip="AI">AI</button>
+          </div>
+          <p class="miniText" id="chipText">Designing smooth interfaces with clear structure and feedback.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card feature reveal">
+        <h2>✨ Interactive</h2>
+        <p>Micro-animations, counters, filters, modal previews, scroll reveal, and toasts.</p>
+      </article>
+      <article class="card feature reveal">
+        <h2>🧭 Easy Navigation</h2>
+        <p>Consistent top navigation + active highlight + skip link for accessibility.</p>
+      </article>
+      <article class="card feature reveal">
+        <h2>🎨 Colorful Theme</h2>
+        <p>Modern gradients, glass cards, and theme toggle (dark/light saved).</p>
+      </article>
+    </section>
+
+    <section class="card reveal">
+      <div class="sectionHead">
+        <h2>What’s Inside</h2>
+        <p>Jump quickly to the section you need.</p>
+      </div>
+      <div class="jump">
+        <a class="jumpCard" href="academic.html">
+          <span>📚</span>
+          <div>
+            <b>Academic History</b>
+            <small>Timeline + filters</small>
+          </div>
+        </a>
+        <a class="jumpCard" href="works.html">
+          <span>🧩</span>
+          <div>
+            <b>Work Produced</b>
+            <small>Gallery + modal</small>
+          </div>
+        </a>
+        <a class="jumpCard" href="qualities.html">
+          <span>💡</span>
+          <div>
+            <b>Personal Qualities</b>
+            <small>Skill bars + badges</small>
+          </div>
+        </a>
+        <a class="jumpCard" href="contact.html">
+          <span>📩</span>
+          <div>
+            <b>Contact</b>
+            <small>Form + validation</small>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div>© <span id="year"></span> Amirul Hafiz • Built with HTML/CSS/JS</div>
+      <span class="muted">Tip: Hover to image or click to change picture.</span>
+      <button class="btn ghost" id="toTop" aria-label="Back to top">↑</button>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/index.js"></script>
+</body>
+</html>

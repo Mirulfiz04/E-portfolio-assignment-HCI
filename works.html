@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Works — Amirul Hafiz</title>
+  <link rel="stylesheet" href="css/works.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+  <span class="logo avatarLogo">
+    <img src="assets/avatar.png" alt="Amirul Hafiz"
+      onerror="this.remove(); this.parentElement.textContent='A';" />
+  </span>
+  <b>Amirul Hafiz</b>
+</a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+      <a class="active" href="works.html">Works</a>
+      <a href="qualities.html">Qualities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card head">
+      <h1>Work Produced / Created</h1>
+      <p class="muted">Search + filter to quickly find projects (good navigation & information structure).</p>
+
+      <div class="tools">
+        <input id="q" type="search" placeholder="Search project (e.g. inventory, AI, clinic)..." />
+        <div class="filters" id="filters">
+          <button class="chip active" data-cat="all">All</button>
+          <button class="chip" data-cat="web">Web</button>
+          <button class="chip" data-cat="mobile">Mobile</button>
+          <button class="chip" data-cat="ai">AI</button>
+          <button class="chip" data-cat="workshop">Workshop</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards" id="cards"></section>
+
+    <footer class="footer">
+      <span class="muted">Tip: Click any card to open preview modal.</span>
+      <a class="btn ghost" href="qualities.html">Next: Qualities →</a>
+    </footer>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modalCard" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+      <button class="x" id="close" aria-label="Close">✕</button>
+      <div class="mBody">
+        <div class="mImg" id="mImg"></div>
+        <div class="mInfo">
+          <h2 id="mTitle"></h2>
+          <p id="mDesc" class="muted"></p>
+          <div id="mTags" class="tags"></div>
+          <div id="mLinks" class="links"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/works.js"></script>
+</body>
+</html>

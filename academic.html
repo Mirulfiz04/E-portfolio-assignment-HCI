@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Academic — Amirul Hafiz</title>
+  <link rel="stylesheet" href="css/academic.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+  <span class="logo avatarLogo">
+    <img src="assets/avatar.png" alt="Amirul Hafiz"
+      onerror="this.remove(); this.parentElement.textContent='A';" />
+  </span>
+  <b>Amirul Hafiz</b>
+</a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="academic.html">Academic</a>
+      <a href="works.html">Works</a>
+      <a href="qualities.html">Qualities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn">🌙</button>
+  </header>
+
+  <main class="container">
+    <section class="card head">
+      <h1>Academic History</h1>
+      <p class="muted">Filter by level + click items to expand details (good information organisation).</p>
+
+      <div class="filters" id="filters">
+        <button class="chip active" data-filter="all">All</button>
+        <button class="chip" data-filter="Degree">Degree</button>
+        <button class="chip" data-filter="Matriculation">Matriculation</button>
+        <button class="chip" data-filter="SPM">SPM</button>
+      </div>
+    </section>
+
+    <section class="timeline" id="timeline"></section>
+
+    <footer class="footer">
+      <span class="muted">Tip: Click any timeline card to expand.</span>
+      <a class="btn ghost" href="works.html">Next: Works →</a>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/academic.js"></script>
+</body>
+</html>

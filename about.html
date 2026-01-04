@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Amirul Hafiz</title>
+  <link rel="stylesheet" href="css/about.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html">
+  <span class="logo avatarLogo">
+    <img src="assets/avatar.png" alt="Amirul Hafiz"
+      onerror="this.remove(); this.parentElement.textContent='A';" />
+  </span>
+  <b>Amirul Hafiz</b>
+</a>
+
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="academic.html">Academic</a>
+      <a href="works.html">Works</a>
+      <a href="qualities.html">Qualities</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn ghost" id="themeBtn" aria-label="Toggle theme">🌙</button>
+  </header>
+
+  <main class="container">
+    <!-- HEADER -->
+    <section class="card header">
+      <div class="headRow">
+        <div>
+          <h1>About Me</h1>
+          <p class="muted">
+            A short introduction + personal details. This page uses an interactive “story” slider to make it engaging.
+          </p>
+        </div>
+
+        <div class="miniStats">
+          <div class="miniStat">
+            <div class="miniNum">3+</div>
+            <div class="miniLbl">Years Study</div>
+          </div>
+          <div class="miniStat">
+            <div class="miniNum">4</div>
+            <div class="miniLbl">Projects</div>
+          </div>
+          <div class="miniStat">
+            <div class="miniNum">HCI</div>
+            <div class="miniLbl">Focus</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOP GRID -->
+    <section class="grid">
+      <!-- PROFILE CARD -->
+      <article class="card profile">
+        <div class="pic" id="pic">
+          <img src="assets/avatar.png" alt="Your photo"
+               onerror="this.remove();document.getElementById('fallback').style.display='grid';" />
+          <div id="fallback" class="fallback" aria-hidden="true">AH</div>
+        </div>
+
+        <div class="info">
+          <h2>Personal & Contact Details</h2>
+
+          <ul class="list">
+            <li><b>Full Name:</b> Amirul Hafiz Bin Anuar</li>
+            <li><b>University:</b> Universiti Teknikal Malaysia Melaka (UTeM)</li>
+            <li><b>Email:</b> <span class="mono">amirul.hafiz73@gmail.com</span></li>
+            <li><b>Phone:</b> <span class="mono">+60-172480218</span></li>
+            <li><b>Location:</b> Selangor, Malaysia</li>
+          </ul>
+
+          <div class="row">
+            <a class="btn primary" href="contact.html">Contact Me</a>
+            <button class="btn" id="copyBtn">Copy Email</button>
+          </div>
+
+          <div class="chips" aria-label="Highlights">
+            <span class="chip">UI/UX</span>
+            <span class="chip">Web</span>
+            <span class="chip">Mobile</span>
+            <span class="chip">AI</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- STORY SLIDER -->
+      <article class="card story">
+        <div class="storyTop">
+          <h2>My Story</h2>
+          <div class="dots" id="dots"></div>
+        </div>
+
+        <div class="slides" id="slides">
+          <div class="slide active">
+            <h3>🎯 Goal</h3>
+            <p>I aim to build systems that are useful, easy to learn, and visually clean.</p>
+          </div>
+
+          <div class="slide">
+            <h3>🛠 What I Enjoy</h3>
+            <p>UI/UX, full-stack web, databases, and building features that feel smooth to users.</p>
+          </div>
+
+          <div class="slide">
+            <h3>📌 Current Focus</h3>
+            <p>Improving interaction design, information structure, accessibility, and micro-interactions.</p>
+          </div>
+
+          <div class="slide">
+            <h3>🤝 Teamwork</h3>
+            <p>I like collaborating in groups—planning tasks, documenting work (SRS/SDD), and presenting outcomes.</p>
+          </div>
+
+          <div class="slide">
+            <h3>🚀 Strength</h3>
+            <p>Turning requirements into real prototypes: clear UI structure, role-based screens, and functional flows.</p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button class="btn" id="prev">← Prev</button>
+          <button class="btn primary" id="next">Next →</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- SECOND GRID -->
+    <section class="grid2">
+      <!-- SKILLS BARS -->
+      <article class="card block">
+        <div class="blockHead">
+          <h2>Skill Snapshot</h2>
+          <p class="muted">A quick view of my strengths (visual + easy to scan).</p>
+        </div>
+
+        <div class="bars">
+          <div class="barRow">
+            <div class="barTop"><b>UI/UX Design</b><span>85%</span></div>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="barRow">
+            <div class="barTop"><b>HTML/CSS/JS</b><span>80%</span></div>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+
+          <div class="barRow">
+            <div class="barTop"><b>Documentation (SRS/SDD)</b><span>78%</span></div>
+            <div class="bar"><span style="width:78%"></span></div>
+          </div>
+
+          <div class="barRow">
+            <div class="barTop"><b>Problem Solving</b><span>82%</span></div>
+            <div class="bar"><span style="width:82%"></span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- TOOLS + INTERESTS -->
+      <article class="card block">
+        <div class="blockHead">
+          <h2>Tools & Interests</h2>
+          <p class="muted">Things I commonly use / explore.</p>
+        </div>
+
+        <div class="pillGrid">
+          <span class="pillTag">VS Code</span>
+          <span class="pillTag">Git/GitHub</span>
+          <span class="pillTag">Figma</span>
+          <span class="pillTag">Laravel</span>
+          <span class="pillTag">Flutter</span>
+          <span class="pillTag">MySQL</span>
+          <span class="pillTag">Cisco Packet Tracer</span>
+          <span class="pillTag">Usability Testing</span>
+        </div>
+
+        <div class="callout">
+          <b>Fun fact:</b> I like polishing small UI details (spacing, hover states, feedback messages) because it improves user experience.
+        </div>
+      </article>
+    </section>
+
+    <!-- OPTIONAL PHOTO STRIP -->
+    <section class="card gallery">
+      <div class="blockHead">
+        <h2>Gallery</h2>
+      </div>
+
+      <div class="photos">
+        <img src="assets/gallery/1.jpg" alt="Gallery image 1"
+             onerror="this.style.display='none'">
+        <img src="assets/gallery/2.jpg" alt="Gallery image 2"
+             onerror="this.style.display='none'">
+        <img src="assets/gallery/3.jpg" alt="Gallery image 3"
+             onerror="this.style.display='none'">
+        <img src="assets/gallery/4.jpg" alt="Gallery image 4"
+             onerror="this.style.display='none'">
+      </div>
+
+      <p class="muted smallNote">
+        Shown images are from university events and project work.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <span class="muted">Tip: Click “Copy Email” to get quick contact.</span>
+      <a class="btn ghost" href="index.html">Back Home</a>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/about.js"></script>
+</body>
+</html>
