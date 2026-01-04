@@ -55,12 +55,12 @@ const academic = [
     id: "matric",
     level: "Matriculation",
     title: "Matriculation Programme (CGPA 3.89)",
-    place: "Kolej Matrikulasi",
+    place: "Kolej Matrikulasi Kejuruteraan Pahang (KMKPh)",
     year: "2022 – 2023",
     img: "assets/logos/kmkph.png", // ✅ put this file
     details: [
       "Foundation studies before degree",
-      "Prepared for computing & problem-solving",
+      "Prepared for problem-solving and General Skills ",
       "Built discipline in learning"
     ]
   },
@@ -73,7 +73,7 @@ const academic = [
     img: "assets/logos/smktpg.png", // ✅ put this file
     details: [
       "Core subjects + elective subjects",
-      "Built early interest in computing",
+      "Improve Communication and Personal Developments",
       "Completed SPM successfully"
     ]
   }

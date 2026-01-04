@@ -34,7 +34,7 @@ const projects = [
   {
     id: 1,
     title: "IPetro Visual Inspection Report",
-    cats: ["web"],
+    cats: ["web", "workshop"],
     desc: "Inventory tracking + low stock alerts + role dashboards.",
     tags: ["Laravel", "Inertia", "MySQL"],
     img: "assets/project1.png",
@@ -73,7 +73,7 @@ const projects = [
   {
     id: 4,
     title: "Event Management System",
-    cats: ["web"],
+    cats: ["workshop"],
     desc: "Analysis + Run whole program + Save Data to the Database.",
     tags: ["Python", "C++", "Database"],
     img: "assets/project4.png",
@@ -90,7 +90,7 @@ const qEl = document.getElementById("q");
 let activeCat = "all";
 
 function prettyCat(c){
-  return ({web:"Web", mobile:"Mobile", ai:"AI", report:"Docs"})[c] || "Project";
+  return ({web:"Web", mobile:"Mobile", ai:"AI", workshop:"Workshop"})[c] || "Project";
 }
 
 function render(){

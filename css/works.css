@@ -190,12 +190,22 @@ h1{
   background:transparent;
   padding:8px 10px;
   cursor:pointer;
+
+  color: var(--text);          /* ✅ FIX: make text visible on dark mode */
+  font: inherit;               /* ✅ keep same font as site */
 }
 
 .chip.active{
   border-color: rgba(34,197,94,.45);
   background: rgba(34,197,94,.12);
+  color: var(--text);          /* ✅ keep bright text */
 }
+
+.chip:hover{
+  border-color: rgba(255,255,255,.22);
+  transform: translateY(-1px);
+}
+
 
 /* ===============================
    PROJECT CARDS (FULL PAGE LOOK)
