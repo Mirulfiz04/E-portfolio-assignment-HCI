@@ -426,3 +426,97 @@ h1{margin:0 0 6px; font-size:36px}
   color:var(--muted);
   line-height:1.7;
 }
+
+/* ===== Academic Timeline (hover image) ===== */
+.timeline{
+  margin-top:14px;
+  display:grid;
+  gap:14px;
+}
+
+.tCard{
+  padding:0;
+  overflow:hidden;
+}
+
+.tWrap{
+  display:grid;
+  grid-template-columns: 220px 1fr 56px;
+  gap:14px;
+  padding:16px;
+  align-items:center;
+}
+
+@media (max-width: 900px){
+  .tWrap{ grid-template-columns: 1fr; }
+  .tToggle{ justify-self:end; }
+}
+
+.tMedia{
+  border-radius:18px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  padding:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+
+  /* ✅ hover feel */
+  opacity:.85;
+  transform: translateY(0);
+  transition: .15s ease;
+}
+
+.tCard:hover .tMedia{
+  opacity:1;
+  transform: translateY(-2px);
+}
+
+.tImgBox{
+  width:100%;
+  height:120px;
+  border-radius:16px;
+  border:1px solid var(--line);
+  overflow:hidden;
+  background: rgba(255,255,255,.03);
+  display:grid;
+  place-items:center;
+}
+
+.tImgBox img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+}
+
+.tYear{
+  font-weight:900;
+  text-align:center;
+}
+
+.tInfo{ min-width:0; }
+.tBadge{
+  display:inline-block;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background: rgba(6,182,212,.10);
+  font-size:12px;
+}
+
+.tTitle{ margin:10px 0 6px; }
+.tMeta{ margin:0; color:var(--muted); }
+
+.tToggle{
+  width:44px;
+  height:44px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  background: rgba(255,255,255,.04);
+  color: var(--text);
+  cursor:pointer;
+}
+
+.tMore{ margin-top:12px; }
+.tList{ margin:0; padding-left:18px; color:var(--muted); line-height:1.7; }

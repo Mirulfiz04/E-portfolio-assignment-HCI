@@ -1,22 +1,29 @@
-// js/academic.js
+// js/academic.js  ✅ (Academic Timeline + Filter + Expand + Theme + Toast)
+
 const root = document.documentElement;
 const themeBtn = document.getElementById("themeBtn");
 const toastEl = document.getElementById("toast");
+const timelineEl = document.getElementById("timeline");
+const filtersEl = document.getElementById("filters");
 
-function toast(msg){
-  if(!toastEl) return;
+function toast(msg) {
+  if (!toastEl) return;
   toastEl.textContent = msg;
   toastEl.classList.add("show");
   clearTimeout(window.__t);
-  window.__t = setTimeout(()=>toastEl.classList.remove("show"), 1600);
+  window.__t = setTimeout(() => toastEl.classList.remove("show"), 1600);
 }
 
-// Theme
+/* ---------------------------
+   THEME (same behavior as others)
+---------------------------- */
 const saved = localStorage.getItem("theme");
-if(saved) root.setAttribute("data-theme", saved);
-if(themeBtn){
-  themeBtn.textContent = (root.getAttribute("data-theme")==="light") ? "☀️" : "🌙";
-  themeBtn.addEventListener("click", ()=>{
+if (saved) root.setAttribute("data-theme", saved);
+if (themeBtn) {
+  themeBtn.textContent =
+    root.getAttribute("data-theme") === "light" ? "☀️" : "🌙";
+
+  themeBtn.addEventListener("click", () => {
     const cur = root.getAttribute("data-theme") || "dark";
     const next = cur === "dark" ? "light" : "dark";
     root.setAttribute("data-theme", next);
@@ -26,113 +33,140 @@ if(themeBtn){
   });
 }
 
-// ✅ Academic timeline data (edit these)
-const academicData = [
+/* ---------------------------
+   ACADEMIC DATA (edit images/links here)
+   ✅ IMPORTANT: Ensure these image paths exist in your repo
+---------------------------- */
+const academic = [
   {
+    id: "deg",
     level: "Degree",
     title: "Bachelor of Computer Science (Software Development)",
     place: "Universiti Teknikal Malaysia Melaka (UTeM)",
     year: "2023 – Present",
+    img: "assets/academic/utem.png", // ✅ put this file
     details: [
-      "Focus: Software Engineering, UI/UX, Web & Mobile development",
-      "Projects: e-Portfolio, SIMS, AI Classifier, etc."
+      "Program: Software Development",
+      "Focus: UI/UX, Web, Mobile, AI projects",
+      "Activities: e-Portfolio, projects, teamwork"
     ]
   },
   {
+    id: "matric",
     level: "Matriculation",
     title: "Matriculation Programme",
     place: "Kolej Matrikulasi",
     year: "2022 – 2023",
+    img: "assets/academic/matric.png", // ✅ put this file
     details: [
-      "Stream: (Edit your stream here)",
-      "Built strong foundation in computing & mathematics"
+      "Foundation studies before degree",
+      "Prepared for computing & problem-solving",
+      "Built discipline in learning"
     ]
   },
   {
+    id: "spm",
     level: "SPM",
     title: "Sijil Pelajaran Malaysia (SPM)",
-    place: "Secondary School (Edit your school name)",
+    place: "Secondary School",
     year: "2021",
+    img: "assets/academic/spm.png", // ✅ put this file
     details: [
-      "Activities: (Edit your activities)",
-      "Results: (Optional)"
+      "Core subjects + elective subjects",
+      "Built early interest in computing",
+      "Completed SPM successfully"
     ]
   }
 ];
 
-const timelineEl = document.getElementById("timeline");
-const filtersEl = document.getElementById("filters");
+let activeFilter = "all";
 
-function render(filter="all"){
-  if(!timelineEl) return;
+/* ---------------------------
+   RENDER
+---------------------------- */
+function render() {
+  if (!timelineEl) return;
   timelineEl.innerHTML = "";
 
-  const items = academicData.filter(item => filter === "all" ? true : item.level === filter);
+  const list =
+    activeFilter === "all"
+      ? academic
+      : academic.filter((x) => x.level === activeFilter);
 
-  items.forEach((item)=>{
+  list.forEach((item) => {
     const card = document.createElement("article");
-    card.className = "card tCard";
-    card.innerHTML = `
-      <div class="tTop">
-        <div class="tLeft">
-          <span class="tPill">${item.level}</span>
-          <h3 class="tTitle">${item.title}</h3>
-          <p class="tMeta">${item.place} • <b>${item.year}</b></p>
-        </div>
-        <button class="tToggle" type="button" aria-expanded="false">+</button>
-      </div>
+    card.className = "tCard card";
+    card.dataset.level = item.level;
 
-      <div class="tMore" hidden>
-        <ul class="tList">
-          ${(item.details || []).map(d=>`<li>${d}</li>`).join("")}
-        </ul>
+    // ✅ This structure is what makes the hover image show nicely
+    card.innerHTML = `
+      <div class="tWrap">
+        <div class="tMedia" aria-hidden="true">
+          <div class="tImgBox">
+            <img src="${item.img}" alt="${item.level} logo" loading="lazy"
+              onerror="this.closest('.tMedia').style.display='none';" />
+          </div>
+          <div class="tYear">${item.year}</div>
+        </div>
+
+        <div class="tInfo">
+          <div class="tBadge">${item.level}</div>
+          <h3 class="tTitle">${item.title}</h3>
+          <p class="tMeta">${item.place} • <span class="tMetaYear">${item.year}</span></p>
+
+          <div class="tMore" hidden>
+            <ul class="tList">
+              ${(item.details || []).map((d) => `<li>${d}</li>`).join("")}
+            </ul>
+          </div>
+        </div>
+
+        <button class="tToggle" type="button" aria-expanded="false" title="Expand">
+          +
+        </button>
       </div>
     `;
 
-    const btn = card.querySelector(".tToggle");
+    const toggle = card.querySelector(".tToggle");
     const more = card.querySelector(".tMore");
 
-    btn.addEventListener("click", (e)=>{
+    toggle.addEventListener("click", (e) => {
       e.stopPropagation();
-      const isOpen = !more.hasAttribute("hidden");
-      if(isOpen){
-        more.setAttribute("hidden", "");
-        btn.textContent = "+";
-        btn.setAttribute("aria-expanded","false");
-      }else{
-        more.removeAttribute("hidden");
-        btn.textContent = "–";
-        btn.setAttribute("aria-expanded","true");
-      }
+      const open = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!open));
+      toggle.textContent = open ? "+" : "–";
+      if (more) more.hidden = open;
     });
 
-    // Click card also toggles
-    card.addEventListener("click", ()=>{
-      btn.click();
-    });
+    // click anywhere to expand too
+    card.addEventListener("click", () => toggle.click());
 
     timelineEl.appendChild(card);
   });
 
-  if(items.length === 0){
+  if (list.length === 0) {
     const empty = document.createElement("div");
-    empty.className = "card tCard";
-    empty.innerHTML = `<h3 class="tTitle">No results</h3><p class="muted">Try another filter.</p>`;
+    empty.className = "card";
+    empty.style.padding = "18px";
+    empty.innerHTML = `<b>No items</b><div class="muted">Try another filter.</div>`;
     timelineEl.appendChild(empty);
   }
 }
+render();
 
-render("all");
-
-// Filters
-if(filtersEl){
-  filtersEl.addEventListener("click", (e)=>{
+/* ---------------------------
+   FILTERS
+---------------------------- */
+if (filtersEl) {
+  filtersEl.addEventListener("click", (e) => {
     const btn = e.target.closest(".chip");
-    if(!btn) return;
-    document.querySelectorAll(".chip").forEach(b=>b.classList.remove("active"));
+    if (!btn) return;
+
+    document.querySelectorAll(".chip").forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
-    const filter = btn.dataset.filter;
-    render(filter);
-    toast(`Filter: ${filter}`);
+
+    activeFilter = btn.dataset.filter === "all" ? "all" : btn.dataset.filter;
+    render();
+    toast(`Filter: ${btn.textContent}`);
   });
 }
