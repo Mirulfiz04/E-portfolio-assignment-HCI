@@ -96,7 +96,7 @@ if(form){
       form.reset();
       setErr(eName,""); setErr(eEmail,""); setErr(eMsg,"");
     }else{
-      toast("Please fix the errors.");
+      toast("Currently just a prototype. HCI purpose only");
     }
   });
 }
