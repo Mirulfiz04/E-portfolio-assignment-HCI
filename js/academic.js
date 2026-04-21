@@ -41,7 +41,7 @@ const academic = [
   {
     id: "deg",
     level: "Degree",
-    title: "Bachelor of Computer Science (Software Development) Current CGPA: 3.60",
+    title: "Bachelor of Computer Science (Software Development)(Current CGPA: 3.60)",
     place: "Universiti Teknikal Malaysia Melaka (UTeM)",
     year: "2023 – Present",
     img: "assets/logos/utem.png", // ✅ put this file
