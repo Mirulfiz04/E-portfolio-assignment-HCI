@@ -5,7 +5,7 @@ no build step, no frameworks. Dark theme by default with a light/dark toggle,
 glassmorphism cards, smooth scroll animations, project filtering, an expandable
 project modal, animated counters, a typing hero, and a validated contact form.
 
-**Live:** https://mirulfiz04.github.io/E-portfolio-assignment-HCI/
+**Live:** https://mirulfiz04.github.io/E-portfolio-AMIRULHAFIZ
 
 ---
 
